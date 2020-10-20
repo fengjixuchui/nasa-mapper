@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\kernel_ctx">
+      <UniqueIdentifier>{83519050-9bed-40a9-a77d-942703f60095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mem_ctx">
+      <UniqueIdentifier>{ee6a9f2c-459b-4c85-a8dc-7a7c2388f001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pe_image">
+      <UniqueIdentifier>{e57e15c5-ee32-4613-8c5d-7a8291374ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\kernel_ctx">
+      <UniqueIdentifier>{ca26a250-bea0-4c50-96bb-c116341e88ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mem_ctx">
+      <UniqueIdentifier>{7b30958b-892c-4861-9bd4-ca7a378fc0f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{497221d8-1116-4880-83f8-6fe282835304}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\physmeme">
+      <UniqueIdentifier>{a262d59d-d938-418f-a639-e19e5e9ba105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pe_image">
+      <UniqueIdentifier>{c3a39f7f-8159-4f90-b3f9-a19ccdf20936}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mapper_ctx">
+      <UniqueIdentifier>{1b65a05e-277d-48e8-9c9a-fde62c697312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mapper_ctx">
+      <UniqueIdentifier>{9e414eb1-5dcb-4a4f-8eec-93a42422cf0c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kernel_ctx\kernel_ctx.cpp">
+      <Filter>Source Files\kernel_ctx</Filter>
+    </ClCompile>
+    <ClCompile Include="mem_ctx\mem_ctx.cpp">
+      <Filter>Source Files\mem_ctx</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_image\pe_image.cpp">
+      <Filter>Source Files\pe_image</Filter>
+    </ClCompile>
+    <ClCompile Include="mapper_ctx\mapper_ctx.cpp">
+      <Filter>Source Files\mapper_ctx</Filter>
+    </ClCompile>
+    <ClCompile Include="map_driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kernel_ctx\kernel_ctx.h">
+      <Filter>Header Files\kernel_ctx</Filter>
+    </ClInclude>
+    <ClInclude Include="mem_ctx\mem_ctx.hpp">
+      <Filter>Header Files\mem_ctx</Filter>
+    </ClInclude>
+    <ClInclude Include="util\hook.hpp">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\nt.hpp">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.hpp">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="physmeme\physmeme.hpp">
+      <Filter>Header Files\physmeme</Filter>
+    </ClInclude>
+    <ClInclude Include="pe_image\pe_image.h">
+      <Filter>Header Files\pe_image</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper_ctx\mapper_ctx.hpp">
+      <Filter>Header Files\mapper_ctx</Filter>
+    </ClInclude>
+    <ClInclude Include="loadup.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="raw_driver.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="direct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="map_driver.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
