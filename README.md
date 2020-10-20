@@ -18,6 +18,20 @@ your manually mapped driver...
 Physmeme and nasa-tables are both inherited into this project, using nasa-patch along with this project is ideal and provides for a very isolated and unique way to 
 have execution in CPL0. If there are any issues with the code make an issue (post a minidump) and detail everything about the issue!
 
+### What?
+
+nasa-mapper is like every other driver mapper except the driver is not mapped into the kernel, only specific contexts/processes you decide to map the driver into.
+
+### How?
+
+memory that is going to be executed in ring-0 in usermode?? SMEP??, well just because the memory is mapped into usermode does not mean it is usermode accessable. nasa-mapper allocates
+the driver in a runtimebroker.exe and then makes all the memory in runtimebroker.exe kernel memory & makes it executable. nasa-mapper then inserts a pml4e at index 70 into desired
+processes.
+
+### Why?
+
+Keeping your driver out of the kernels paging tables. 
+
 # Spectre
 
 Please disable spectre/meltdown when using nasa-tables/nasa-patch/nasa-mapper. You can download a program to disable spectre/meltdown [here](https://www.grc.com/inspectre.htm).
