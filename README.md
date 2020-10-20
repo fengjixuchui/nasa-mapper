@@ -26,11 +26,12 @@ nasa-mapper is like every other driver mapper except the driver is not mapped in
 
 memory that is going to be executed in ring-0 in usermode?? SMEP??, well just because the memory is mapped into usermode does not mean it is usermode accessable. nasa-mapper allocates
 the driver in a runtimebroker.exe and then makes all the memory in runtimebroker.exe kernel memory & makes it executable. nasa-mapper then inserts a pml4e at index 70 into a desired
-processes thus mapping the usermode unaccessable memory into the process.
+processes pointing at the allocated driver in the runtimebroker, thus mapping the "drivers" memory into the process.
 
 ### Why?
 
-Keeping your driver out of the kernels paging tables. 
+Keeping your driver out of the kernels paging tables. Most driver mappers map a driver into a kernel pool (ExAllocatePool). Physmeme, Kdmapper, Drvmapper, all do this, its easily
+detected and easy to dump. This keeps your driver inside of your context :)
 
 # Spectre
 
