@@ -23,6 +23,11 @@ namespace physmeme
 		make_kernel_access(drv_alloc);
 
 		//
+		// removes the kernel memory from runtimebroker.exe
+		//
+		map_from.set_pml4e(drv_ppml4e, pml4e{ NULL });
+
+		//
 		// set new pml4e into specific process.
 		//
 		drv_pml4e.nx = false;

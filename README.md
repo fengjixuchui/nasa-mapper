@@ -8,6 +8,10 @@
     <img src="https://githacks.org/xerox/nasa-mapper/-/raw/baa56396025feca63e9fa85b7fc8c89efa34b45a/img/Spectre-Unsupported-red.svg"/>
 </div>
 
+# credit
+
+* buck#0001 - contributed to nasa-tables which is inherited in this project...
+
 # nasa-mapper
 
 Map a driver into specific processes only, with zero allocations in the kernel. The driver is allocated in a suspended runtimebroker.exe which is created with the sole
