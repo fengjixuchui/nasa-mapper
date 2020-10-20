@@ -25,8 +25,8 @@ nasa-mapper is like every other driver mapper except the driver is not mapped in
 ### How?
 
 memory that is going to be executed in ring-0 in usermode?? SMEP??, well just because the memory is mapped into usermode does not mean it is usermode accessable. nasa-mapper allocates
-the driver in a runtimebroker.exe and then makes all the memory in runtimebroker.exe kernel memory & makes it executable. nasa-mapper then inserts a pml4e at index 70 into desired
-processes.
+the driver in a runtimebroker.exe and then makes all the memory in runtimebroker.exe kernel memory & makes it executable. nasa-mapper then inserts a pml4e at index 70 into a desired
+processes thus mapping the usermode unaccessable memory into the process.
 
 ### Why?
 
