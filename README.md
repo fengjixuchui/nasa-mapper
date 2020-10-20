@@ -21,6 +21,9 @@ have execution in CPL0. If there are any issues with the code make an issue (pos
 ### What?
 
 nasa-mapper is like every other driver mapper except the driver is not mapped into the kernel, only specific contexts/processes you decide to map the driver into.
+There are limitations to this driver mapper. Firstly your driver is not going to be globally mapped. Its only going to be accessable from inside of your context. 
+You can still call kernel functions, but you cannot switch contexts. In other words do not call `KeStackAttachProcess` directly. You can call MmCopyVirtualMemory though
+since the context switch will happen inside of `ntoskrnl` which is globally mapped.
 
 ### How?
 
@@ -32,6 +35,8 @@ processes pointing at the allocated driver in the runtimebroker, thus mapping th
 
 Keeping your driver out of the kernels paging tables. Most driver mappers map a driver into a kernel pool (ExAllocatePool). Physmeme, Kdmapper, Drvmapper, all do this, its easily
 detected and easy to dump. This keeps your driver inside of your context :)
+
+I guess you can call this physmeme v2? You can use any driver that exposes physical memory read/write with this driver mapper, simply replace the vulnerable driver inside of raw_driver.hpp.
 
 # Spectre
 
