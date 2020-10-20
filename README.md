@@ -20,4 +20,4 @@ have execution in CPL0. If there are any issues with the code make an issue (pos
 
 # Spectre
 
-Please disable spectre/meltdown when using nasa-tables/nasa-patch/nasa-mapper.
+Please disable spectre/meltdown when using nasa-tables/nasa-patch/nasa-mapper. You can download a program to disable spectre/meltdown [here](https://www.grc.com/inspectre.htm).
